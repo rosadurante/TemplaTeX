@@ -1,0 +1,34 @@
+{% load i18n %}
+
+% Type of document. This case, article.
+\documentclass[letterpaper]{article}
+
+% Title and author of article.
+\title{ {{title}} }
+\author{ {{author}} }
+
+% Document begins.
+\begin{document}
+
+% Build the title defined up.
+\maketitle
+
+{% if abstract %}
+% Write here the abstract of article.
+\begin{abstract}
+Delete this line and write the abstract of this article.
+
+\end{abstract}
+{% endif %}
+
+{% if tableofcontents %}
+\tableofcontents
+{% endif %}
+
+{% for section in num_sections %}
+\section{section title}
+Delete this line and write here the content of a section.
+{% endfor %}
+
+% End of the document.
+\end{document}

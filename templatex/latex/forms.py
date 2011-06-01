@@ -24,16 +24,16 @@ class BasicDocument(forms.Form):
     required_css_class = 'required'
     error_css_class = 'error'
 
-    type_content = forms.ChoiceField(
+    type_content = forms.MultipleChoiceField(
         required=True,
         label=_('Type of document'),
         choices=(
             ('article', _(u'Article')),
-            ('book', _(u'Book')),
-            ('presentation', _(u'Presentation')),
             ),
+            # ('book', _(u'Book')),
+            # ('presentation', _(u'Presentation'))),
         initial='article',
-        widget=forms.Select
+        widget=forms.SelectMultiple
         )
 
 
@@ -51,6 +51,12 @@ class Article(forms.Form):
         widget=forms.TextInput)
     abstract = forms.BooleanField(
         required=False)
+    tableofcontents = forms.BooleanField(
+        required=False)
     num_sections = forms.IntegerField(
         required=True,
+        widget=forms.TextInput)
+    file_name = forms.CharField(
+        required=False,
+        max_length=50,
         widget=forms.TextInput)

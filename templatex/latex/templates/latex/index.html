@@ -1,6 +1,6 @@
 {% load i18n %}
 
-<form action="/latex/" method="post">{% csrf_token %}
+<form action="{{ action }}" method="post">{% csrf_token %}
     {% for fields in form.visible_fields %}
         <div class="fieldWrapper">
             {{ fields.errors }}

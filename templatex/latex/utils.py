@@ -18,12 +18,24 @@
 
 import json
 
+from django.shortcuts import render_to_response
+
 from latex.forms import BasicDocument, Article
 
 
 def get_basic_datas(BasicDocument):
-    pass
+    return BasicDocument.cleaned_data['type_content']
 
 
 def get_article_datas(Article):
-    pass
+    title = Article.cleaned_data['title']
+    author = Article.cleaned_data['author']
+    abstract = Article.cleaned_data['abstract']
+    tableofcontents = Article.cleaned_data['tableofcontents']
+    num_sections = Article.cleaned_data['num_sections']
+    file_name = Article.cleaned_data['file_name']
+
+    print title + ', ' + author + ', ' + str(num_sections)
+    return {'title': title, 'author': author,
+            'abstract': abstract, 'tableofcontents': tableofcontents,
+            'num_sections': range(num_sections), 'file_name': file_name}
