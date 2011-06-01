@@ -1,0 +1,11 @@
+{% load i18n %}
+
+<form action="/latex/" method="post">{% csrf_token %}
+    {% for fields in form.visible_fields %}
+        <div class="fieldWrapper">
+            {{ fields.errors }}
+            {{ fields.label_tag }}: {{ fields }}
+        </div>
+    {% endfor %}
+    <p><input type="submit" value="Get TemplaTeX" /></p>
+</form>
