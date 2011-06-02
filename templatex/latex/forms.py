@@ -41,6 +41,14 @@ class Article(forms.Form):
     required_css_class = 'required'
     error_css_class = 'error'
 
+    # document style
+    font_size = forms.IntegerField(
+        required=False,
+        initial=12,
+        max_value=12,
+        min_value=8)
+
+    # document content
     title = forms.CharField(
         required=True,
         max_length=200,
@@ -49,6 +57,10 @@ class Article(forms.Form):
         required=False,
         max_length=100,
         widget=forms.TextInput)
+    date = forms.DateField(
+        required=False,
+        widget=forms.DateInput,
+        input_formats=('%B %d %Y', '%B %d %Y'))
     abstract = forms.BooleanField(
         required=False)
     tableofcontents = forms.BooleanField(

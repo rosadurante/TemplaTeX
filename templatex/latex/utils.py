@@ -30,12 +30,15 @@ def get_basic_datas(BasicDocument):
 def get_article_datas(Article):
     title = Article.cleaned_data['title']
     author = Article.cleaned_data['author']
+    date = Article.cleaned_data['date']
     abstract = Article.cleaned_data['abstract']
     tableofcontents = Article.cleaned_data['tableofcontents']
     num_sections = Article.cleaned_data['num_sections']
     file_name = Article.cleaned_data['file_name']
 
-    print title + ', ' + author + ', ' + str(num_sections)
-    return {'title': title, 'author': author,
-            'abstract': abstract, 'tableofcontents': tableofcontents,
-            'num_sections': range(num_sections), 'file_name': file_name}
+    font_size = Article.cleaned_data['font_size']
+
+    return {'title': title, 'author': author, 'date': date,
+               'abstract': abstract, 'tableofcontents': tableofcontents,
+               'num_sections': range(num_sections), 'file_name': file_name,
+               'font_size': font_size}
