@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% load i18n %}
+
+{% block menubar %}
+<div id="menu">
+  <ul id="mainmenu">
+    <li id="article"><a href="/latex/article/" title="Create an article templatex">{% trans "Create an article templatex" %}</a></li>
+    <li id="book"><a href="/latex/book/" title="Create a book template">{% trans "Create a book templatex" %}</a></li>
+    <li id="presentation"><a href="/latex/presentation/" title="Create a presentation template">{% trans "Create a presentation template" %}</a></li>
+  </ul>
+</div>
+{% endblock %}
+
+{% block content %}
+<div id="content">
+</div>
+{% endblock %}
+
+{% block footer %}
+<div id="footer">
+  <p>Copyright @ 2011 -  Rosa María Durante Lerate </p>
+</div>
+{% endblock %}
