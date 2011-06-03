@@ -1,0 +1,42 @@
+{% load i18n %}
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <title>TemplaTeX</title>
+    <meta name="description" content="Generator basic LaTeX templates">
+    <meta name="keywords" content="latex, tex, django" />
+    <meta name="author" content="Rosa Durante">
+    <link href="/media/css/style.css" rel="stylesheet" type="text/css" />
+ </head>
+
+  <body>
+    <header>
+      {% block header %}
+      <hgroup>
+        <!--h1>TemplaTeX</h1>-->
+        <h1><img src="/media/img/logo_templatex.png" /></h1>
+        <!--h2>{% trans "Generator basic LaTeX templates" %}</h2>-->
+      </hgroup>
+      {% endblock %}
+      <div class="about">
+        <a href="/about/" title="About us">{% trans "About us" %}</a>
+      </div>
+      <div class="menubar">
+        {% block menubar %}
+        {% endblock %}
+      </div>
+    </header>
+
+    <section class="content">
+      {% block content %}
+      {% endblock %}
+    </section>
+
+    <footer>
+      {% block footer %}{% endblock %}
+    </footer>
+  </body>
+
+</html>
