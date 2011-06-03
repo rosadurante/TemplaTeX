@@ -1,0 +1,88 @@
+
+body {
+    margin: 0;
+    width: 100% auto;
+    background-color: #dcd8e1;
+}
+
+header {
+    border-radius: 2px 2px 12px 12px;
+    box-shadow:0 1px 4px rgba(0, 0, 0, 4);
+    margin-bottom: 4%;
+    background: url("/media/img/background_header.png") repeat scroll 0 0 transparent;
+}
+
+a {
+    font-style: normal;
+    text-decoration: none;
+    color: white;
+}
+
+header h1 {
+    display:inline;
+}
+
+header h2 {
+    color: white;
+    display:inline;
+    font-size: small;
+}
+
+.about a {
+    display: inline;
+    margin-left: 90%;
+    font-size:small;
+    color: #5d4f68;
+}
+
+.menubar {
+    padding-left:30%;
+    padding-right:20%;
+
+}
+
+#menu ul {
+    padding: 0;
+    margin: 0;
+}
+
+#mainmenu li {
+    display:inline;
+    list-style-type:circle;
+    padding: 10px;
+    text-align:top center;
+    border-radius: 5px 5px 5px 5px;
+    background: url("/media/img/background_menu.png") repeat scroll 0 0 transparent;
+    font-size: small;
+    align: center;
+}
+
+.content {
+    margin-left:15%;
+    margin-right:15%;
+    background-color: white;
+}
+
+#content {
+    border-radius: 8px 8px 5px 5px;
+    box-shadow:0 1px 5px rgba(0, 0, 0, 4);
+    padding: 2px;
+}
+
+footer{
+    text-align:center;
+    margin-bottom: 1%;
+    margin-top: 2%;
+    margin-left: 25%;
+    margin-right: 25%;
+}
+
+#footer p{
+    color: #5d4f68;
+    border-radius: 4px 4px 4px 4px;
+    box-shadow:0 1px 4px rgba(0, 0, 0, 4);
+    padding-top: 2px;
+    padding-bottom: 5px;
+    font-size:x-small;
+    background: url("/media/img/background_header.png") repeat scroll 0 0 transparent;
+}
